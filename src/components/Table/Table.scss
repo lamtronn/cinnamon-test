@@ -2,7 +2,7 @@
 	.table-container {
 		margin-top: 50px;
 		margin-bottom: 80px;
-		.table-header {
+		.table-title {
 			p {
 				font-size: 24px;
 				line-height: 30px;
@@ -11,13 +11,13 @@
 		table {
 			width: 100%;
 			// font-size: 20px;
-    }
-    tr {
-      background-color: #cfd6ec;
-      &:nth-child(even) {
-        background-color: #eaebf5;
-      }
-    }
+		}
+		tr {
+			background-color: #cfd6ec;
+			&:nth-child(even) {
+				background-color: #eaebf5;
+			}
+		}
 		th {
 			height: 30px;
 			background: #4472c5;
@@ -25,26 +25,46 @@
 			font-style: bold;
 		}
 		td {
-      padding: 3px;
-      text-align: center;
-      height: 30px;
+			padding: 3px;
+			text-align: center;
+			height: 30px;
 		}
-    .table-column-small {
-      width: 30px;
-    }
-    .table-column-big {
-      width: 150px;
-    }
-    .table-align-left {
-      text-align: left;
-      padding: 0 10px 0 10px;
-    }
-    .table-align-right {
-      text-align: right;
-      padding: 0 10px 0 10px;
-    }
-  }
-  hr {
-    border: 0.5px solid #5b6d9b;
-  }
+		.table-column-small {
+			width: 30px;
+		}
+		.table-column-big {
+			width: 150px;
+		}
+		.table-align-left {
+			text-align: left;
+			padding: 0 10px 0 10px;
+		}
+		.table-align-right {
+			text-align: right;
+			padding: 0 10px 0 10px;
+		}
+		// .table-column-delele {
+		// 	right: -5px;
+		//   width: 30px;
+		// 	position: relative;
+		// }
+		.table-column-star {
+			position: relative;
+		}
+		.table-column-delete {
+			left: 170px;
+      -ms-transform: translateY(-140%);
+      transform: translateY(-140%);
+			top: 50%;
+			position: absolute;
+		}
+	}
+	br {
+		display: block;
+		content: '';
+		margin-top: 2px;
+	}
+	hr {
+		border: 0.5px solid #5b6d9b;
+	}
 }

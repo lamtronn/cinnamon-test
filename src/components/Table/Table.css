@@ -3,7 +3,7 @@
   margin-bottom: 80px;
 }
 
-.table-wrapper .table-container .table-header p {
+.table-wrapper .table-container .table-title p {
   font-size: 24px;
   line-height: 30px;
 }
@@ -49,6 +49,24 @@
 .table-wrapper .table-container .table-align-right {
   text-align: right;
   padding: 0 10px 0 10px;
+}
+
+.table-wrapper .table-container .table-column-star {
+  position: relative;
+}
+
+.table-wrapper .table-container .table-column-delete {
+  left: 170px;
+  -webkit-transform: translateY(-140%);
+          transform: translateY(-140%);
+  top: 50%;
+  position: absolute;
+}
+
+.table-wrapper br {
+  display: block;
+  content: '';
+  margin-top: 2px;
 }
 
 .table-wrapper hr {
