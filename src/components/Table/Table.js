@@ -47,25 +47,23 @@ class Table extends Component {
 	}
 
 	onDeleteUser = (id) => {
-    let { users } = this.state;
-    let index = this.findIndex(id)
-    console.log(users);
-		if (users !== undefined) {
-			users.splice(index, 1);
-			this.setState({ users: users });
-		}
-  };
-  
-  findIndex = (id) => {
-    let {users} = this.state;
-    let result = -1;
-    users.forEach((user, index) => {
-        if (user.id === id) {
-            result = index;
-        }
-    });
-    return result;
-}
+		let { users } = this.state;
+		let index = this.findIndex(id);
+		console.log(users);
+		users.splice(index, 1);
+		this.setState({ users: users });
+	};
+
+	findIndex = (id) => {
+		let { users } = this.state;
+		let result = -1;
+		users.map((user, index) => {
+			if (user.id === id) {
+				result = index;
+			}
+		});
+		return result;
+	};
 
 	render() {
 		let userList = this.state.users.map((user, index) => {
@@ -92,8 +90,8 @@ class Table extends Component {
 					</td>
 				</tr>
 			);
-    });
-    
+		});
+
 		return (
 			<div className="table-wrapper">
 				<div className="table-container">
@@ -114,6 +112,7 @@ class Table extends Component {
 							{userList}
 						</table>
 					</div>
+					<div className="table-buttons"></div>
 				</div>
 				<hr />
 			</div>

@@ -12,50 +12,50 @@
   width: 100%;
 }
 
-.table-wrapper .table-container tr {
+.table-wrapper .table-container table tr {
   background-color: #cfd6ec;
 }
 
-.table-wrapper .table-container tr:nth-child(even) {
+.table-wrapper .table-container table tr:nth-child(even) {
   background-color: #eaebf5;
 }
 
-.table-wrapper .table-container th {
+.table-wrapper .table-container table th {
   height: 30px;
   background: #4472c5;
   color: white;
   font-style: bold;
 }
 
-.table-wrapper .table-container td {
+.table-wrapper .table-container table td {
   padding: 3px;
   text-align: center;
   height: 30px;
 }
 
-.table-wrapper .table-container .table-column-small {
+.table-wrapper .table-container table .table-column-small {
   width: 30px;
 }
 
-.table-wrapper .table-container .table-column-big {
+.table-wrapper .table-container table .table-column-big {
   width: 150px;
 }
 
-.table-wrapper .table-container .table-align-left {
+.table-wrapper .table-container table .table-align-left {
   text-align: left;
   padding: 0 10px 0 10px;
 }
 
-.table-wrapper .table-container .table-align-right {
+.table-wrapper .table-container table .table-align-right {
   text-align: right;
   padding: 0 10px 0 10px;
 }
 
-.table-wrapper .table-container .table-column-star {
+.table-wrapper .table-container table .table-column-star {
   position: relative;
 }
 
-.table-wrapper .table-container .table-column-delete {
+.table-wrapper .table-container table .table-column-delete {
   left: 170px;
   -webkit-transform: translateY(-140%);
           transform: translateY(-140%);
