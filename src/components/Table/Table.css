@@ -1,0 +1,57 @@
+.table-wrapper .table-container {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.table-wrapper .table-container .table-header p {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.table-wrapper .table-container table {
+  width: 100%;
+}
+
+.table-wrapper .table-container tr {
+  background-color: #cfd6ec;
+}
+
+.table-wrapper .table-container tr:nth-child(even) {
+  background-color: #eaebf5;
+}
+
+.table-wrapper .table-container th {
+  height: 30px;
+  background: #4472c5;
+  color: white;
+  font-style: bold;
+}
+
+.table-wrapper .table-container td {
+  padding: 3px;
+  text-align: center;
+  height: 30px;
+}
+
+.table-wrapper .table-container .table-column-small {
+  width: 30px;
+}
+
+.table-wrapper .table-container .table-column-big {
+  width: 150px;
+}
+
+.table-wrapper .table-container .table-align-left {
+  text-align: left;
+  padding: 0 10px 0 10px;
+}
+
+.table-wrapper .table-container .table-align-right {
+  text-align: right;
+  padding: 0 10px 0 10px;
+}
+
+.table-wrapper hr {
+  border: 0.5px solid #5b6d9b;
+}
+/*# sourceMappingURL=Table.css.map */

@@ -1,0 +1,41 @@
+.navigation-wrapper {
+  height: 45px;
+  background-color: white;
+}
+
+.navigation-wrapper .navigation-logo img {
+  height: 40px;
+}
+
+.navigation-wrapper .navigation-menu {
+  float: right;
+  text-align: right;
+}
+
+.navigation-wrapper .navigation-menu ul {
+  margin: 0;
+  height: 45px;
+  list-style-type: none;
+}
+
+.navigation-wrapper .navigation-menu ul li {
+  line-height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 20px;
+  color: #808080;
+  display: inline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation-wrapper .navigation-menu ul li:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #1a99b6;
+}
+
+.navigation-wrapper hr {
+  border: 0.5px solid #5b6d9b;
+}
+/*# sourceMappingURL=Navigation.css.map */
