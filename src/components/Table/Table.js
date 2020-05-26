@@ -61,7 +61,7 @@ class Table extends Component {
 		let target = event.target;
 		let name = target.name;
 		let value = target.value;
-		
+
 		newUsersArray[index][name] = value;
 		this.setState({
 			users: newUsersArray,
@@ -110,7 +110,7 @@ class Table extends Component {
 							name="name"
 							value={user.name}
 							className="table-form-input"
-							onChange={(event) => this.onEditUser(event, user.id)}
+							onChange={(event) => this.onEditUser(event, index)}
 						/>
 					</td>
 					<td className="table-align-right">
@@ -128,11 +128,11 @@ class Table extends Component {
 							name="level"
 							value={user.level}
 							className="table-form-input"
-							onChange={(event) => this.onEditUser(event, user.id)}
+							onChange={(event) => this.onEditUser(event, index)}
 						/>
 					</td>
 					<td className="table-column-star">
-						<select value={user.star} name="star" onChange={(event) => this.onEditUser(event, user.id)}>
+						<select value={user.star} name="star" onChange={(event) => this.onEditUser(event, index)}>
 							<option value={0}>0</option>
 							<option value={1}>1</option>
 							<option value={2}>2</option>
