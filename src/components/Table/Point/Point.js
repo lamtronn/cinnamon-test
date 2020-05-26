@@ -18,7 +18,9 @@ class Point extends PureComponent {
 
   convertNumber(point) {
     if (point > 1000) {
-      return point.toLocaleString();
+      // point = point.toString();
+      console.log(typeof(point));
+      return point.toLocaleString('en');
     }
     if (point < 0) {
       point = point.toString();

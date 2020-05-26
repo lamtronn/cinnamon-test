@@ -41,6 +41,10 @@
   width: 150px;
 }
 
+.table-wrapper .table-container table .table-column-medium {
+  width: 130px;
+}
+
 .table-wrapper .table-container table .table-align-left {
   text-align: left;
   padding: 0 10px 0 10px;
@@ -56,11 +60,41 @@
 }
 
 .table-wrapper .table-container table .table-column-delete {
-  left: 170px;
+  left: 150px;
   -webkit-transform: translateY(-140%);
           transform: translateY(-140%);
   top: 50%;
   position: absolute;
+}
+
+.table-wrapper .table-container table .table-form-input {
+  height: 25px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.table-wrapper .table-container .table-button {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.table-wrapper .table-container .table-button .table-button-edit {
+  height: 40px;
+  width: 130px;
+  color: white;
+  background-color: #a5a5a5;
+  border: 2px solid #787878;
+  font-size: 20px;
+}
+
+.table-wrapper .table-container .table-button .table-button-ok {
+  margin-left: 20px;
+  height: 40px;
+  width: 130px;
+  color: white;
+  background-color: #5b9bd6;
+  border: 2px solid #566f88;
+  font-size: 20px;
 }
 
 .table-wrapper br {

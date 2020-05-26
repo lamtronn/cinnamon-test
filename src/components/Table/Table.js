@@ -42,16 +42,33 @@ class Table extends Component {
 					star: 0,
 				},
 			],
+			usersEditing: null,
 			onEdit: false,
 		};
 	}
 
 	onDeleteUser = (id) => {
 		let { users } = this.state;
+		let newUsersArray = [...users];
 		let index = this.findIndex(id);
-		console.log(users);
-		users.splice(index, 1);
-		this.setState({ users: users });
+		newUsersArray.splice(index, 1);
+		console.log(newUsersArray, users);
+		this.setState({ users: newUsersArray });
+	};
+
+	onEditUser = (event, id) => {
+		let { users } = this.state;
+		let index = this.findIndex(id);
+		let newUsersArray = [...users];
+
+		let target = event.target;
+		let name = target.name;
+		let value = target.value;
+		newUsersArray[index][name] = value;
+		this.setState({
+			users: newUsersArray,
+		});
+		console.log(newUsersArray);
 	};
 
 	findIndex = (id) => {
@@ -65,11 +82,15 @@ class Table extends Component {
 		return result;
 	};
 
-	render() {
-		let userList = this.state.users.map((user, index) => {
+	onClickEdit = (param) => {
+		this.setState({ onEdit: param });
+	};
+
+	userList = () =>
+		this.state.users.map((user, index) => {
 			return (
-				<tr>
-					<td className="table-column-small">{user.id}</td>
+				<tr key={user.id}>
+					<td className="table-column-small">{index + 1}</td>
 					<td className="table-align-left">{user.name}</td>
 					<td className="table-align-right">
 						<Point point={user.point} />
@@ -92,6 +113,54 @@ class Table extends Component {
 			);
 		});
 
+	userListEdit = () =>
+		this.state.users.map((user, index) => {
+			return (
+				<tr>
+					<td className="table-column-small">{user.id}</td>
+					<td className="table-align-left">
+						<input
+							type="text"
+							name="name"
+							value={user.name}
+							className="table-form-input"
+							onChange={(event) => this.onEditUser(event, user.id)}
+						/>
+					</td>
+					<td className="table-align-right">
+						<input
+							type="number"
+							name="point"
+							value={user.point}
+							className="table-form-input"
+							onChange={(event) => this.onEditUser(event, user.id)}
+						/>
+					</td>
+					<td>
+						<input
+							type="number"
+							name="level"
+							value={user.level}
+							className="table-form-input"
+							onChange={(event) => this.onEditUser(event, user.id)}
+						/>
+					</td>
+					<td className="table-column-star">
+						<select value={user.star} name="star" onChange={(event) => this.onEditUser(event, user.id)}>
+							<option value={0}>0</option>
+							<option value={1}>1</option>
+							<option value={2}>2</option>
+							<option value={3}>3</option>
+						</select>
+					</td>
+				</tr>
+			);
+		});
+
+	render() {
+		let userList = this.userList();
+		let userListEdit = this.userListEdit();
+
 		return (
 			<div className="table-wrapper">
 				<div className="table-container">
@@ -105,14 +174,27 @@ class Table extends Component {
 								<th className="table-align-left">Name</th>
 								<th className="table-align-right">Point</th>
 								<th className="table-column-big">Level</th>
-								<th className="table-column-big">Star</th>
+								<th className="table-column-medium">Star</th>
 								{/* <th className="table-column-delete"></th> */}
 							</tr>
 							<br />
-							{userList}
+							{this.state.onEdit === false ? userList : userListEdit}
 						</table>
 					</div>
-					<div className="table-buttons"></div>
+					<div className="table-button">
+						<button
+							className="table-button-edit"
+							onClick={() => this.onClickEdit(true)}
+						>
+							Edit
+						</button>
+						<button
+							className="table-button-ok"
+							onClick={() => this.onClickEdit(false)}
+						>
+							OK
+						</button>
+					</div>
 				</div>
 				<hr />
 			</div>

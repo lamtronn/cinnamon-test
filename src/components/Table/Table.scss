@@ -33,6 +33,9 @@
 			.table-column-big {
 				width: 150px;
 			}
+			.table-column-medium {
+				width: 130px;
+			}
 			.table-align-left {
 				text-align: left;
 				padding: 0 10px 0 10px;
@@ -45,11 +48,37 @@
 				position: relative;
 			}
 			.table-column-delete {
-				left: 170px;
+				left: 150px;
 				-ms-transform: translateY(-140%);
 				transform: translateY(-140%);
 				top: 50%;
 				position: absolute;
+			}
+			.table-form-input {
+				height: 25px;
+				width: 100%;
+				font-size: 14px;
+			}
+		}
+		.table-button {
+			margin-top: 40px;
+			text-align: right;
+			.table-button-edit{
+				height: 40px;
+				width: 130px;
+				color: white;
+				background-color: #a5a5a5;
+				border: 2px solid #787878;
+				font-size: 20px;
+			}
+			.table-button-ok{
+				margin-left: 20px;
+				height: 40px;
+				width: 130px;
+				color: white;
+				background-color: #5b9bd6;
+				border: 2px solid #566f88;
+				font-size: 20px;
 			}
 		}
 	}
