@@ -68,7 +68,6 @@ class Table extends Component {
 		this.setState({
 			users: newUsersArray,
 		});
-		console.log(newUsersArray);
 	};
 
 	findIndex = (id) => {
@@ -116,7 +115,7 @@ class Table extends Component {
 	userListEdit = () =>
 		this.state.users.map((user, index) => {
 			return (
-				<tr>
+				<tr key={user.id}>
 					<td className="table-column-small">{user.id}</td>
 					<td className="table-align-left">
 						<input
