@@ -47,38 +47,25 @@ class Table extends Component {
 		};
 	}
 
-	onDeleteUser = (id) => {
+	onDeleteUser = (index) => {
 		let { users } = this.state;
 		let newUsersArray = [...users];
-		let index = this.findIndex(id);
 		newUsersArray.splice(index, 1);
-		console.log(newUsersArray, users);
 		this.setState({ users: newUsersArray });
 	};
 
-	onEditUser = (event, id) => {
+	onEditUser = (event, index) => {
 		let { users } = this.state;
-		let index = this.findIndex(id);
 		let newUsersArray = [...users];
 
 		let target = event.target;
 		let name = target.name;
 		let value = target.value;
+		
 		newUsersArray[index][name] = value;
 		this.setState({
 			users: newUsersArray,
 		});
-	};
-
-	findIndex = (id) => {
-		let { users } = this.state;
-		let result = -1;
-		users.map((user, index) => {
-			if (user.id === id) {
-				result = index;
-			}
-		});
-		return result;
 	};
 
 	onClickEdit = (param) => {
@@ -101,7 +88,7 @@ class Table extends Component {
 						<Star star={user.star} />
 						<p className="table-column-delete">
 							<FontAwesomeIcon
-								onClick={() => this.onDeleteUser(user.id)}
+								onClick={() => this.onDeleteUser(index)}
 								className="star"
 								icon={faTrash}
 								style={{ color: '#7f7f7f' }}
@@ -132,7 +119,7 @@ class Table extends Component {
 							name="point"
 							value={user.point}
 							className="table-form-input"
-							onChange={(event) => this.onEditUser(event, user.id)}
+							onChange={(event) => this.onEditUser(event, index)}
 						/>
 					</td>
 					<td>
