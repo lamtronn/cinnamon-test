@@ -20,7 +20,7 @@ class Point extends PureComponent {
     if (point > 1000) {
       // point = point.toString();
       console.log(typeof(point));
-      return point.toLocaleString('en');
+      return parseInt(point).toLocaleString('en');
     }
     if (point < 0) {
       point = point.toString();
