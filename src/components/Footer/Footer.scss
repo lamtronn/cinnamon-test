@@ -1,31 +1,38 @@
 .footer-wrapper {
-	padding: 20px 50px;
-	display: grid;
-	grid-template-columns: auto auto;
-	column-gap: 60px;
+	width: 812px;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	margin-bottom: 30px;
 	.footer-title {
-		display: flex;
-		align-items: center;
 		p {
-			text-align: center;
-			font-size: 24px;
+			text-align: left;
+			font-family: Lato;
+			font-size: 20px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: 0.42px;
+			color: #17a0c3;
 		}
 	}
 	.footer-content {
-		width: 316.438px;
 		p {
-			letter-spacing: 0.5px;
+			font-family: Lato;
+			font-size: 14px;
+			letter-spacing: 0.35px;
 			text-align: justify;
-			text-align-last: justify;
+			color: #9b9b9b;
 		}
-		.last-line {
-			p {
-				margin: 0;
-				letter-spacing: 3px;
-			}
-		}
+		// .last-line {
+		// 	p {
+		// 		margin: 0;
+		// 		letter-spacing: 3px;
+		// 	}
+		// }
 	}
 	hr {
-		border: 0.5px solid #5b6d9b;
+		border: 0.5px solid #d8d8d8;
 	}
 }

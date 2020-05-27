@@ -7,11 +7,18 @@ import Table from './components/Table/Table';
 import './App.css';
 
 function App() {
-	return <div className="App">
-    <Navigation/>
-    <Table/>
-    <Footer/>
-  </div>;
+	return (
+		<div className="App">
+			<div className="wrapper">
+				<div className="wrapper-background-1">
+					<Navigation />
+					{/* <Table /> */}
+					<Footer />
+				</div>
+				<div className="wrapper-background-2"></div>
+			</div>
+		</div>
+	);
 }
 
 export default App;

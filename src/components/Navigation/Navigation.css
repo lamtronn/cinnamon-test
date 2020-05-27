@@ -1,6 +1,5 @@
 .navigation-wrapper {
   height: 45px;
-  background-color: white;
 }
 
 .navigation-wrapper .navigation-logo img {
@@ -20,8 +19,10 @@
 
 .navigation-wrapper .navigation-menu ul li {
   line-height: 45px;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
   margin-left: 20px;
   color: #808080;
   display: inline;
@@ -36,6 +37,6 @@
 }
 
 .navigation-wrapper hr {
-  border: 0.5px solid #5b6d9b;
+  border: 0.5px solid #d8d8d8;
 }
 /*# sourceMappingURL=Navigation.css.map */
