@@ -8,6 +8,10 @@
   line-height: 30px;
 }
 
+.table-wrapper .table-container .table {
+  overflow-x: auto;
+}
+
 .table-wrapper .table-container table {
   width: 100%;
 }
