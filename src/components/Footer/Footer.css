@@ -3,7 +3,13 @@
   display: block;
   position: absolute;
   bottom: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-wrapper {
+    width: 290px;
+  }
 }
 
 .footer-wrapper .footer-title p {
@@ -18,12 +24,24 @@
   color: #17a0c3;
 }
 
+@media screen and (max-width: 480px) {
+  .footer-wrapper .footer-title p {
+    font-size: 12px;
+  }
+}
+
 .footer-wrapper .footer-content p {
   font-family: Lato;
   font-size: 14px;
   letter-spacing: 0.35px;
   text-align: justify;
   color: #9b9b9b;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-wrapper .footer-content p {
+    font-size: 12px;
+  }
 }
 
 .footer-wrapper hr {

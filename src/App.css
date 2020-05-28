@@ -10,31 +10,31 @@
 	height: 100vh;
 }
 .wrapper {
-  position: relative;
+	position: relative;
 }
 
 .wrapper .wrapper-background-1 {
 	padding: 35px;
-  z-index: 2;
-  position: relative;
-  min-width: 812px;
-  min-height: 520px;
-  border-radius: 35px;
-  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+	z-index: 2;
+	position: relative;
+	min-width: 812px;
+	min-height: 520px;
+	border-radius: 35px;
+	box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
 }
 
 .wrapper .wrapper-background-2 {
 	padding: 35px;
-  z-index: 1;
-  bottom: 15px;
-  left: 15px;
-  position: absolute;
-  width: 812px;
-  height: 520px;
-  border-radius: 35px;
-  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.7);
+	z-index: 1;
+	bottom: 15px;
+	left: 15px;
+	position: absolute;
+	width: 812px;
+	height: 520px;
+	border-radius: 35px;
+	box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.9);
 }
 
 .App-logo {
@@ -69,5 +69,16 @@
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.wrapper .wrapper-background-1 {
+		min-width: 290px;
+	}
+	.wrapper .wrapper-background-2 {
+		width: 290px;
+		bottom: 10px;
+		left: 10px;
 	}
 }

@@ -75,7 +75,7 @@ class Table extends Component {
 	userList = () =>
 		this.state.users.map((user, index) => {
 			return (
-				<tr key={user.id}>
+				<tr className="table-column" key={user.id}>
 					<td className="table-column-small">{index + 1}</td>
 					<td className="table-align-left">{user.name}</td>
 					<td className="table-align-right">
@@ -86,14 +86,6 @@ class Table extends Component {
 					</td>
 					<td className="table-column-star">
 						<Star star={user.star} />
-						<p className="table-column-delete">
-							<FontAwesomeIcon
-								onClick={() => this.onDeleteUser(index)}
-								className="star"
-								icon={faTrash}
-								style={{ color: '#7f7f7f' }}
-							/>
-						</p>
 					</td>
 				</tr>
 			);
@@ -132,12 +124,24 @@ class Table extends Component {
 						/>
 					</td>
 					<td className="table-column-star">
-						<select value={user.star} name="star" onChange={(event) => this.onEditUser(event, index)}>
+						<select
+							value={user.star}
+							name="star"
+							onChange={(event) => this.onEditUser(event, index)}
+						>
 							<option value={0}>0</option>
 							<option value={1}>1</option>
 							<option value={2}>2</option>
 							<option value={3}>3</option>
 						</select>
+					</td>
+					<td className="table-column-delete">
+						<FontAwesomeIcon
+							onClick={() => this.onDeleteUser(index)}
+							className="delete"
+							icon={faTrash}
+							style={{ color: '#7f7f7f' }}
+						/>
 					</td>
 				</tr>
 			);
@@ -150,39 +154,38 @@ class Table extends Component {
 		return (
 			<div className="table-wrapper">
 				<div className="table-container">
-					<div className="table-title">
-						<p>Stage1</p>
-					</div>
 					<div className="table">
 						<table>
 							<tr className="table-header">
-								<th className="table-column-small">#</th>
+								<th className="table-column-small table-top-left">#</th>
 								<th className="table-align-left">Name</th>
 								<th className="table-align-right">Point</th>
 								<th className="table-column-big">Level</th>
-								<th className="table-column-medium">Star</th>
+								<th className="table-column-medium table-top-right">Star</th>
+								{/* <th className="table-column-small">#</th> */}
 								{/* <th className="table-column-delete"></th> */}
 							</tr>
-							<br />
 							{this.state.onEdit === false ? userList : userListEdit}
 						</table>
 					</div>
 					<div className="table-button">
-						<button
-							className="table-button-edit"
-							onClick={() => this.onClickEdit(true)}
-						>
-							Edit
-						</button>
-						<button
-							className="table-button-ok"
-							onClick={() => this.onClickEdit(false)}
-						>
-							OK
-						</button>
+						{this.state.onEdit !== true ? (
+							<button
+								className="table-button-edit"
+								onClick={() => this.onClickEdit(true)}
+							>
+								Edit
+							</button>
+						) : (
+							<button
+								className="table-button-ok"
+								onClick={() => this.onClickEdit(false)}
+							>
+								OK
+							</button>
+						)}
 					</div>
 				</div>
-				<hr />
 			</div>
 		);
 	}

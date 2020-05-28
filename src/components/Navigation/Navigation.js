@@ -42,7 +42,7 @@ class Navigation extends Component {
 							<li>
 								<FontAwesomeIcon
 									onClick={() => this.onToggleMenu()}
-									className="star"
+									className="navigation-hamburger"
 									icon={faBars}
 									style={{ width: '30px' }}
 								/>

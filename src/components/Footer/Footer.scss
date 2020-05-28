@@ -3,7 +3,10 @@
 	display: block;
 	position: absolute;
 	bottom: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	@media screen and (max-width: 480px) {
+		width: 290px;
+	}
 	.footer-title {
 		p {
 			text-align: left;
@@ -15,6 +18,9 @@
 			line-height: normal;
 			letter-spacing: 0.42px;
 			color: #17a0c3;
+			@media screen and (max-width: 480px) {
+				font-size: 12px;
+			}
 		}
 	}
 	.footer-content {
@@ -24,6 +30,9 @@
 			letter-spacing: 0.35px;
 			text-align: justify;
 			color: #9b9b9b;
+			@media screen and (max-width: 480px) {
+				font-size: 12px;
+			}
 		}
 		// .last-line {
 		// 	p {

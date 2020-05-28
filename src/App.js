@@ -12,7 +12,7 @@ function App() {
 			<div className="wrapper">
 				<div className="wrapper-background-1">
 					<Navigation />
-					{/* <Table /> */}
+					<Table />
 					<Footer />
 				</div>
 				<div className="wrapper-background-2"></div>

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-//import { Test } from './Point.styles';
 
 class Point extends PureComponent {
 	constructor(props) {
@@ -27,10 +26,10 @@ class Point extends PureComponent {
 	render() {
 		return (
 			<div
-				style={{ color: this.props.point < 0 ? 'red' : 'black' }}
+				style={{ color: this.props.point < 0 ? 'red' : '#4A4A4A' }}
 				className="point-wrapper"
 			>
-				{this.state.point}
+				<p>{this.state.point}</p>
 			</div>
 		);
 	}

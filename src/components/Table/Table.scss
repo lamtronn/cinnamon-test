@@ -10,25 +10,42 @@
 		}
 		.table {
 			overflow-x: auto;
+			.table-header {
+				background-image: linear-gradient(93deg, #16a1c4, #46c49f);
+			}
 		}
 		table {
+			// border-collapse: collapse;
+			color: #4a4a4a;
 			width: 100%;
 			tr {
-				background-color: #cfd6ec;
+				background-color: #f5f5f5;
 				&:nth-child(even) {
-					background-color: #eaebf5;
+					background-color: #ffffff;
 				}
 			}
 			th {
 				height: 30px;
-				background: #4472c5;
 				color: white;
 				font-style: bold;
 			}
 			td {
 				padding: 3px;
 				text-align: center;
-				height: 30px;
+				height: 40px;
+			}
+			.table-top-left {
+				border-top-left-radius: 10.5px;
+			}
+			.table-top-right {
+				border-top-right-radius: 10.5px;
+			}
+			.table-column {
+				transition: 0.3s;
+				&:hover {
+					transition: 0.3s;
+					background-color: #f5fdff;
+				}
 			}
 			.table-column-small {
 				width: 30px;
@@ -51,11 +68,12 @@
 				position: relative;
 			}
 			.table-column-delete {
-				left: 150px;
-				-ms-transform: translateY(-140%);
-				transform: translateY(-140%);
-				top: 50%;
-				position: absolute;
+				background-color: white;
+				// left: 150px;
+				// -ms-transform: translateY(-140%);
+				// transform: translateY(-140%);
+				// top: 50%;
+				// position: absolute;
 			}
 			.table-form-input {
 				height: 25px;
@@ -64,24 +82,28 @@
 			}
 		}
 		.table-button {
-			margin-top: 40px;
+			margin-top: 20px;
 			text-align: right;
-			.table-button-edit{
+			.table-button-edit {
 				height: 40px;
 				width: 130px;
 				color: white;
-				background-color: #a5a5a5;
-				border: 2px solid #787878;
-				font-size: 20px;
+				background-image: linear-gradient(93deg, #16a1c4, #46c49f);
+				border: none;
+				border-radius: 10px;
+				box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+				font-size: 14px;
 			}
-			.table-button-ok{
+			.table-button-ok {
 				margin-left: 20px;
 				height: 40px;
 				width: 130px;
 				color: white;
-				background-color: #5b9bd6;
-				border: 2px solid #566f88;
-				font-size: 20px;
+				background-image: linear-gradient(93deg, #16a1c4, #46c49f);
+				border: none;
+				border-radius: 10px;
+				box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+				font-size: 14px;
 			}
 		}
 	}
