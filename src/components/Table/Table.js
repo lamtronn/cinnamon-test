@@ -170,7 +170,8 @@ class Table extends Component {
 							{this.state.onEdit === false ? userList : userListEdit}
 						</table>
 					</div>
-					<div className="table-button">
+				</div>
+				<div className="table-button">
 						{this.state.onEdit !== true ? (
 							<button
 								className="table-button-edit"
@@ -187,7 +188,6 @@ class Table extends Component {
 							</button>
 						)}
 					</div>
-				</div>
 			</div>
 			</Animated>
 		);
