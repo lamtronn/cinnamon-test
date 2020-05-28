@@ -84,6 +84,13 @@
 		.table-button {
 			margin-top: 20px;
 			text-align: right;
+			button {
+				transition: 0.3s;
+				&:active {
+					transition: 0.3s;
+					transform: translateY(10px);
+				}
+			}
 			.table-button-edit {
 				height: 40px;
 				width: 130px;
@@ -92,7 +99,7 @@
 				border: none;
 				border-radius: 10px;
 				box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
-				font-size: 14px;
+				font-size: 17px;
 			}
 			.table-button-ok {
 				margin-left: 20px;
@@ -103,7 +110,7 @@
 				border: none;
 				border-radius: 10px;
 				box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
-				font-size: 14px;
+				font-size: 17px;
 			}
 		}
 	}

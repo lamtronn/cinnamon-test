@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Animated } from 'react-animated-css';
 import Point from './Point/Point';
 import Level from './Level/Level';
 import Star from './Star/Star';
@@ -140,7 +141,7 @@ class Table extends Component {
 							onClick={() => this.onDeleteUser(index)}
 							className="delete"
 							icon={faTrash}
-							style={{ color: '#7f7f7f' }}
+							style={{ color: '#9b9b9b' }}
 						/>
 					</td>
 				</tr>
@@ -152,6 +153,7 @@ class Table extends Component {
 		let userListEdit = this.userListEdit();
 
 		return (
+			<Animated animationIn="fadeIn" animationInDelay="200" isVisible={true}>
 			<div className="table-wrapper">
 				<div className="table-container">
 					<div className="table">
@@ -187,6 +189,7 @@ class Table extends Component {
 					</div>
 				</div>
 			</div>
+			</Animated>
 		);
 	}
 }

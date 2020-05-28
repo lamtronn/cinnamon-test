@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Animated } from 'react-animated-css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../assets/images/logo.png';
@@ -33,25 +34,28 @@ class Navigation extends Component {
 	render() {
 		let menu = this.menu();
 		return (
-			<div className="navigation-wrapper">
-				<div className="navigation-logo">
-					<img src={Logo} alt="logo" />
-					<div className="navigation-menu">
-						<ul>
-							{this.state.displayMenu === true ? menu : null}
-							<li>
-								<FontAwesomeIcon
-									onClick={() => this.onToggleMenu()}
-									className="navigation-hamburger"
-									icon={faBars}
-									style={{ width: '30px' }}
-								/>
-							</li>
-						</ul>
+			<Animated animationIn="fadeIn" animationInDelay="100" isVisible={true}>
+				<div className="navigation-wrapper">
+					<div className="navigation-logo">
+						<img src={Logo} alt="logo" />
+
+						<div className="navigation-menu">
+							<ul>
+								{this.state.displayMenu === true ? menu : null}
+								<li>
+									<FontAwesomeIcon
+										onClick={() => this.onToggleMenu()}
+										className="navigation-hamburger"
+										icon={faBars}
+										style={{ width: '30px' }}
+									/>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<hr />
 				</div>
-				<hr />
-			</div>
+			</Animated>
 		);
 	}
 }
